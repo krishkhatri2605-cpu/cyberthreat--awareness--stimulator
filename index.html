@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cyber Threat Awareness Stimulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🛡 Cyber Threat Awareness Stimulator</h1>
+  <p>Interactive Cyber Security Training Software</p>
+</header>
+
+<nav class="menu">
+  <button class="btn" onclick="showSection('intro')">🏠 Home</button>
+  <button class="btn" onclick="showSection('missions')">🎯 Missions</button>
+  <button class="btn" onclick="showSection('quiz')">🧠 Quiz</button>
+  <button class="btn" onclick="showSection('phishing')">🎣 Phishing</button>
+  <button class="btn" onclick="showSection('terminal')">💻 Terminal</button>
+  <button class="btn" onclick="showSection('password')">🔐 Password Lab</button>
+  <button class="btn" onclick="showSection('leaderboard')">🏆 Leaderboard</button>
+</nav>
+
+<main>
+
+<!-- INTRO -->
+<section class="card section" id="intro">
+  <h2>Welcome to CTAS</h2>
+  <p>
+    Cyber Threat Awareness Stimulator (CTAS) is a long-form interactive training platform 
+    designed to teach users about cyber threats, phishing attacks, password security, 
+    social engineering, malware risks, and safe online practices.
+  </p>
+  <p>
+    Scroll and explore multiple modules designed like a real cybersecurity learning software.
+  </p>
+</section>
+
+<!-- MISSIONS -->
+<section class="card section hidden" id="missions">
+  <h2>🎯 Cyber Missions</h2>
+  <p>Complete missions to earn security points.</p>
+  <button class="btn" onclick="completeMission(10)">Beginner Mission (+10)</button>
+  <button class="btn" onclick="completeMission(25)">Intermediate Mission (+25)</button>
+  <button class="btn" onclick="completeMission(50)">Expert Mission (+50)</button>
+  <p id="mission-status"></p>
+</section>
+
+<!-- QUIZ -->
+<section class="card section hidden" id="quiz">
+  <h2>🧠 Cyber Awareness Quiz</h2>
+  <p id="question"></p>
+  <div id="options"></div>
+  <button class="btn" onclick="nextQuestion()">Next Question</button>
+  <p class="highlight" id="score"></p>
+</section>
+
+<!-- PHISHING -->
+<section class="card section hidden" id="phishing">
+  <h2>🎣 Phishing Detection Lab</h2>
+  <div class="email-box">
+    <b>From:</b> support@bank-security-alert.com<br>
+    <b>Subject:</b> Urgent Verification Required<br><br>
+    Your account will be locked unless verified immediately. Click below to confirm.
+  </div>
+  <button class="btn danger" onclick="phishResult(false)">This is Phishing</button>
+  <button class="btn success" onclick="phishResult(true)">This is Safe</button>
+  <p id="phish-feedback"></p>
+</section>
+
+<!-- TERMINAL -->
+<section class="card section hidden" id="terminal">
+  <h2>💻 Hacker Terminal Simulator</h2>
+  <div class="terminal" id="terminalOutput"></div>
+  <input type="text" id="terminalInput" placeholder="Type: help / scan / hack / clear" onkeydown="runCommand(event)">
+</section>
+
+<!-- PASSWORD -->
+<section class="card section hidden" id="password">
+  <h2>🔐 Password Strength Laboratory</h2>
+  <input type="text" id="passwordInput" placeholder="Enter password">
+  <button class="btn" onclick="checkPassword()">Check Strength</button>
+  <p id="pass-result"></p>
+</section>
+
+<!-- LEADERBOARD -->
+<section class="card section hidden" id="leaderboard">
+  <h2>🏆 Global Leaderboard</h2>
+  <table id="leaderboardTable">
+    <tr><th>User</th><th>Score</th></tr>
+  </table>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Cyber Threat Awareness Stimulator — Security Training Platform
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
