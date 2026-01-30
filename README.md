@@ -6,7 +6,6 @@
 ![Cyber Security](https://img.shields.io/badge/Cyber-Security-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 ![Made With](https://img.shields.io/badge/Made%20With-HTML%20CSS%20JS-orange?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
 ---
 
