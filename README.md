@@ -10,9 +10,6 @@
 
 ---
 
-## 🚀 Live Demo  
-🔗 Coming Soon (Host using GitHub Pages)
-
 ---
 
 ## 🎯 Project Overview
